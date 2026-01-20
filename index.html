@@ -8,6 +8,11 @@
         body{
         font-family: 'roboto', sans-serif;
         font-size: 12px;}
+        
+        .teste{
+        display: flex;
+        flex-direction: column;
+        }
 
     </style>
 </head>
@@ -42,14 +47,27 @@ ou novas construções.
 
     Potência do equipamento (em watts):<br>
     <input type="number" id="potencia" placeholder="Ex: 1050"><br><br>
-
-    Comprimento do cabo (fase):<br>
-    <input type="number" id="cabo" placeholder="Ex: 10"><br><br>
+    <select id="temperatura">
+        <option value="1.22">10°C</option>
+        <option value="1.17">15°C</option>
+        <option value="1.12">20°C</option>
+        <option value="1.06">25°C</option>
+        <option value="1"    selected>30°C</option>
+        <option value="0.94">35°C</option>
+        <option value="0.87">40°C</option>
+        <option value="0.79">45°C</option>
+        <option value="0.71">50°C</option>
+        <option value="0.61">55°C</option>
+        <option value="0.50">60°C</option>
+    </select>
 
     <button id="adicionar">Adicionar equipamento</button>
-    <button>Calcular</button>
+    <button id="Calcular">Calcular</button>
 </div>
-<span id="teste"></span>
+<br>
+<span id="span2"></span> <br> <br>
+<span class="teste" id="teste"></span> 
+
 
 <h1>Entendendo o site</h1>
 

@@ -1,6 +1,8 @@
 console.log('js carregou')
 const btnaddEquipamento = document.getElementById('adicionar');
 const span = document.getElementById('teste');
+const btncalcular = document.getElementById('Calcular');
+const span2 = document.getElementById('span2');
 
 const lista = []
 
@@ -50,10 +52,37 @@ function calcularbitola(corrente){
     return bitola;
 }
 
+    function atualizarSpan() {
+    let texto = '';
+
+    lista.forEach((item, index) => {
+        texto += `${index + 1} - ${item.aparelho}: ${item.watts} W\n`;
+    });
+
+    span.textContent = texto;
+}
+
+
 btnaddEquipamento.addEventListener('click', () =>{
     const aparelho = document.getElementById('nome').value;
     const watts = Number(document.getElementById('potencia').value);
+
+    lista.push({
+        aparelho, watts
+    })
+
+    atualizarSpan();
+    
+    
+    console.log(lista)
+ 
+
+})
+btncalcular.addEventListener('click', ()=>{
+    const aparelho = document.getElementById('nome').value;
+    const watts = Number(document.getElementById('potencia').value);
     const tensao = Number(document.getElementById('tensao').value);
+    const temperatura = Number(document.getElementById('temperatura').value);
     
 
     lista.push({
@@ -65,15 +94,9 @@ btnaddEquipamento.addEventListener('click', () =>{
     },0)
     
     const amperagem = wattsTotal / tensao
-    const corrente = amperagem *1.1
+    const fatorcorrecao = amperagem * temperatura
+    const corrente = fatorcorrecao *1.1
 
     const sessao = calcularbitola(corrente)
-    span.textContent = sessao
-    
-    
-
-    console.log(lista)
-    console.log(wattsTotal)
-    console.log(corrente)
-
+    span2.textContent = sessao
 })
