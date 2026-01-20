@@ -16,5 +16,5 @@ https://ensinandoeletrica.blogspot.com/2015/02/como-calcular-potencia-corrente-e
 
 https://docente.ifsc.edu.br/felipe.camargo/MaterialDidatico/ELETRO%201%20-%20ELETRICIDADE/NBR/nbr_5410.pdf
 
-https://ensinandoeletrica.blogspot.com/2015/02/como-calcular-potencia-corrente-e-tensao.html
+
 
