@@ -99,4 +99,5 @@ btncalcular.addEventListener('click', ()=>{
 
     const sessao = calcularbitola(corrente)
     span2.textContent = sessao
+    console.log(temperatura)
 })
